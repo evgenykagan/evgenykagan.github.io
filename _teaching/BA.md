@@ -6,6 +6,7 @@ permalink: "/teaching/BA"
 institution: "Johns Hopkins University, Carey Business School"
 excerpt: "This is a graduate-level course focusing on learning the basics of analytics (predictive, prescriptive) and applying those methods to real-world problems. The course is taught mainly using R and Excel"
 seq: "2"
+date: 01-01-2018
 ---
 
 Being a business leader in a data driven world requires the knowledge of both data-related (statistical) methods and of appropriate models to use that data. The Foundations of Business Analytics course focuses on the latter: it introduces students to quantitative (“analytical”) frameworks and techniques for decision making. At a high level, these techniques include optimization, risk modeling, and Monte Carlo simulation. For each methodology students are first exposed to the basic mechanics, and then apply the methodology to real world business problems using software. 
