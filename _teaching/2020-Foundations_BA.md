@@ -1,11 +1,12 @@
 ---
 title: "Foundations of Business Analytics (JHU Carey, MBA, 2020-current)"
 collection: teaching
-teaching_type: "Course"
+type: "Graduate Course"
 permalink: "/teaching/2020-Foundations_BA"
-institution: "Johns Hopkins University, Carey Business School"
-excerpt: "This is a graduate-level course focusing on learning the basics of analytics (predictive, prescriptive) and applying those methods to real-world problems. Course is taught using mainly MS Excel, with the possibility of learning R."
-seq: "1"
+venue: "Johns Hopkins University, Carey Business School"
+location: "Washington DC and Baltimore MD"
+#excerpt: "This is a graduate-level course focusing on learning the basics of analytics (predictive, prescriptive) and applying those methods to real-world problems. Course is taught using mainly MS Excel, with the possibility of learning R."
+#seq: "1"
 date: "2020-09-01"
 ---
 
