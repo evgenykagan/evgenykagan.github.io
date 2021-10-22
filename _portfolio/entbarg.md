@@ -3,7 +3,7 @@ title: "Entrepreneur-Investor Bargaining: Do the Number of Investors and Contrac
 collection: portfolio
 permalink: /portfolio/entbarg
 excerpt: "<img src='/images/entbarg.jpeg'  style='float:right;width:400px;' >
-In this research we study how entrepreneurs and investors divide equity. We use the Nash bargaining framework and test several predictions in the lab.  We find that
+<b>Co-authored with Kyle Hyndman and Anyan Qi.</b> <br> In this research we study how entrepreneurs and investors divide equity. We use the Nash bargaining framework and test several predictions in the lab.  We find that
 the number of investors matters less than the contract form.  Preferred Stock contracts, which are popular in practice, disadvantage the entrepreneur and lead to more aggressive
 investor bargaining tactics."
 seq: "2"
