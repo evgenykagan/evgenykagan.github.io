@@ -8,4 +8,4 @@ seq: "3"
 
 ---
 
-The manuscript is currently in preparation.  Please email me for details. 
+Click this  <a href="/files/agile.pdf" target="_blank"><u>LINK</u></a>  to be redirected to the working version of this paper.  
