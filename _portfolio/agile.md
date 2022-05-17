@@ -1,5 +1,5 @@
 ---
-title: "Agile Development Is Not (Always) a Panacea: an Experimental Study"
+title: "One Size Does Not Fit All: Strengths and Weaknesses of the Agile Approach"
 collection: portfolio
 permalink: /portfolio/agile
 excerpt: "<img src='/images/brain.jpeg'  style='float:right;width:400px;' >
