@@ -15,7 +15,7 @@ I am a tenure-track Assistant Professor of Operations Management and Business An
 ## Research
 My research lies at the intersection of operations management and behavioral science.  My areas of expertise are experiment design, behavioral economics/operations and innovation/entrepreneurship. 
 
-<p style="color:#000080">  <em> Media update (June 2023): Our  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4283285"> Chatbots paper </a> was covered in the <a href="https://carey.jhu.edu/articles/hurdles-ai-chatbots-customer-service"> last issue </a> of the Changing Business magazine.</em>  </p> 
+<p style="color:#002D72">  <em> Media update (June 2023): <br>Our  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4283285">Chatbots paper</a> was covered in the <a href="https://carey.jhu.edu/articles/hurdles-ai-chatbots-customer-service">last issue</a> of the Changing Business magazine.</em>  </p> 
 
 
 ## Teaching
