@@ -12,4 +12,3 @@ author_profile: true
   {% include archive-single.html %}
 {% endfor %}
 
-Image Sources: Medium.com/startupgrind, ScienceMag 

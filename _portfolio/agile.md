@@ -1,9 +1,9 @@
 ---
-title: "One Size Does Not Fit All: Strengths and Weaknesses of the Agile Approach"
+title: "On Repeat: Does Iteration Drive Innovation?"
 collection: portfolio
 permalink: /portfolio/agile
-excerpt: "<img src='/images/brain.jpeg'  style='float:right;width:400px;' >
-<b>Co-authored with Tobias Lieberum and Sebastian Schiffels.</b> <br> In this paper we examine how agile development principles (iterative sprints, autonomy) affect innovation performance. We find that Agile mainly helps low performance by creating a sense of urgency; however for more complex task it can lead to short term thinking and harm performance." 
+excerpt: "<img src='/images/brain.jpeg'  style='float:right;width:350px;' >
+<b>Co-authored with Tobias Lieberum, Sebastian Schiffels and Sebastian Jost.</b> <br> In this paper we examine how agile development principles (iterative sprints, autonomy) affect innovation performance. We find that frequent iterations help improve performance in complex tasks by increasing exploration behaviors." 
 seq: "3"
 
 ---
