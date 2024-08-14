@@ -1,5 +1,5 @@
 ---
-title: "Sources of Leverage in Entrepreneur-Investor Bargaining"
+title: "Startup Contracting and Entrepreneur-Investor Bargaining"
 collection: portfolio
 permalink: /portfolio/entbarg
 excerpt: "<img src='/images/entbarg.jpeg'  style='float:right;width:350px;' >

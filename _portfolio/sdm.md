@@ -1,5 +1,5 @@
 ---
-title: "Dynamic Decision-making in Operations Management"
+title: "Understanding Sequential Decision Strategies"
 collection: portfolio
 permalink: /portfolio/sdm
 excerpt: "<img src='/images/sdm.jpg'  style='float:right;width:350px;' >

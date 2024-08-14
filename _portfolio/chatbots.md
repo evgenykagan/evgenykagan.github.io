@@ -1,5 +1,5 @@
 ---
-title: "AI Chatbots in Customer Service: Adoption Hurdles and Simple Remedies"
+title: "Beyond Algorithm Aversion: The Role of Risk and Gatekeeper Aversion in AI Chatbot Adoption"
 collection: portfolio
 permalink: /portfolio/chatbots
 excerpt: "<img src='/images/chatbots.jpeg'  style='float:right;width:350px;' >
