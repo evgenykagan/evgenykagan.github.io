@@ -2,7 +2,7 @@
 title: "Understanding Sequential Decision Strategies"
 collection: portfolio
 permalink: /portfolio/sdm
-excerpt: "<img src='/images/sdm.jpg'  style='float:right;width:350px;' >
+excerpt: "<img src='/images/sdm.jpg'  style='float:right;width:350px;margin-left:20px;margin-bottom:40px;' >
 <b>Co-authored with Stephen Leider and Ozge Sahin.</b> <br> In this paper we look at how people make dynamic (sequential) decisions. We examine decision-making in a range of dynamic problems and find, unsurprisingly, that most people are not 'forward-looking optimizers'.  Rather, decision rules depend on the type of environment: decision rules are static in stopping problems (Stop in round X), but are quite sophisticated in other dynamic problems." 
 seq: "4"
 

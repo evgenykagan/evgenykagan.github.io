@@ -2,8 +2,8 @@
 title: "On Repeat: Does Iteration Drive Innovation?"
 collection: portfolio
 permalink: /portfolio/agile
-excerpt: "<img src='/images/brain.jpeg'  style='float:right;width:350px;' >
-<b>Co-authored with Tobias Lieberum, Sebastian Schiffels and Sebastian Jost.</b> <br> In this paper we examine how agile development principles (iterative sprints, autonomy) affect innovation performance. We find that frequent iterations help improve performance in complex tasks by increasing exploration behaviors. This is driven by slower learning under sequential (non-iterative) workflow." 
+excerpt: "<img src='/images/brain.jpeg'  style='float:right;width:350px;margin-left:20px;margin-bottom:40px;' >
+<b>Co-authored with Tobias Lieberum, Sebastian Schiffels and Sebastian Jost.</b> <br> In this paper we examine how agile development principles (iterative sprints, autonomy) affect innovation performance. We find that frequent iterations help improve performance in complex tasks by increasing exploration behaviors. The main mechanism is slower learning under sequential (non-iterative) workflow." 
 seq: "3"
 
 ---
