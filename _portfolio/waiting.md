@@ -7,4 +7,4 @@ excerpt: "<img src='/images/waiting.jpeg'  style='float:right;width:350px;margin
 seq: "7"
 
 ---
-Click this  <a href="/files/waiting.pdf" target="_blank"><u>LINK</u></a>  to be redirected to the working version of this paper.  
+Click this  <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4899240" target="_blank"><u>LINK</u></a>  to be redirected to the working version of this paper.  
