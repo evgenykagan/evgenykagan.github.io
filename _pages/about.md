@@ -16,6 +16,7 @@ I am a tenure-track Assistant Professor of Operations Management and Business An
 My research lies at the intersection of operations management and behavioral science.  My areas of expertise are experiment design, behavioral economics/operations, service operations and innovation/entrepreneurship. 
 
 <div style="margin-left: 20px; margin-right: 20px; color: #002D72;">
+  <p><em><b>Awards Update</b> (September 2024): Our 2023 Operations Research  <a href="https://pubsonline.informs.org/doi/abs/10.1287/opre.2021.2211">paper</a> was named a finalist in the MSOM Service SIG best paper competition. Winners will be announced at the upcoming INFORMS 2024 annual meeting! </em></p>
   <p><em><b>Media Update</b> (May 2024): I was interviewed by the <a href="https://www.wsj.com/tech/ai/chatbots-consumer-sentiment-f045b6cd">Wall Street Journal</a> and <a href="https://www.aarp.org/benefits-discounts/members-only-access/info-2024/modern-problems-solutions-guide.html">AARP</a> to discuss my work on AI chatbots. See <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4347448">theory</a> and <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4283285">experiment</a> papers for details.</em></p>
 </div>
 
