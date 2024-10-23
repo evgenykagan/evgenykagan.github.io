@@ -5,7 +5,7 @@ permalink: /awards/
 author_profile: true
 ---
 <ul>
-  <li> MSOM Service SIG Best Published Paper Award 2024, Finalist (Winners will be announced at INFORMS 2024 Annual Meeting) </li>
+  <li> MSOM Service SIG Best Published Paper Award 2024, Winner </li>
   <li> INFORMS Technology, Innovation Management and Entrepreneurship (TIME) Section Best Working Paper Award 2023, Winner (<a href="https://connect.informs.org/times/awards/best-working-paper"><u>Link</u></a>) </li>
     <li> INFORMS Technology, Innovation Management and Entrepreneurship (TIME) Best Best Paper Award 2023 (Papers published between 2018-2023), Runner-up (<a href="https://connect.informs.org/times/awards/best-paper-award"><u>Link</u></a>) </li>
   <li> INFORMS Best Behavioral Operations Working Paper Award 2020, Winner (<a href="https://connect.informs.org/behavioral-operations-management/awards"><u>Link</u></a>) </li>
