@@ -72,9 +72,9 @@ social:
   links: # An array of links to social media profiles
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # Change to google-gtag for GA4
   google:
-    tracking_id          :  "G-23BZF1TJF6"
+    tracking_id          : "G-23BZF1TJF6"
 
 
 
