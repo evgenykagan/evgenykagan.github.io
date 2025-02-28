@@ -72,10 +72,9 @@ social:
   links: # An array of links to social media profiles
 # Analytics
 analytics:
-  provider               : "google-gtag" # Change to google-gtag for GA4
+  provider: "google"
   google:
-    tracking_id          : "G-23BZF1TJF6"
-
+    tracking_id: "G-23BZF1TJF6"
 
 
 # Site Author
