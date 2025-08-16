@@ -10,7 +10,7 @@ redirect_from:
 
 {% include base_path %}
 
-I am a tenure-track Assistant Professor of Operations Management and Business Analytics at Johns Hopkins University, [Carey Business School](https://carey.jhu.edu/).  I received my PhD in Operations Management from the University of Michigan, Ross School of Business.
+I am an Associate Professor of Operations Management and Business Analytics at Johns Hopkins University, [Carey Business School](https://carey.jhu.edu/).   
 
 ## Research
 My research lies at the intersection of operations management and behavioral science.  My areas of expertise are experiment design, behavioral economics/operations, service operations and innovation/entrepreneurship. 
