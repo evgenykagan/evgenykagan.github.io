@@ -16,6 +16,9 @@ I am an Associate Professor of Operations Management and Business Analytics at J
 My research lies at the intersection of operations management and behavioral science.  My areas of expertise are experiment design, behavioral economics/operations, service operations and innovation/entrepreneurship. 
 
 <div style="margin-left: 20px; margin-right: 20px; color: #002D72;">
+  <p><em><b>Publications Update</b> (September 2025): Our paper on Agile product development was accepted for publication at <b>Manufacturing and Service Operations Management</b>. The pre-print can be found <a href="https://evgenykagan.github.io/files/agile.pdf">here.</a></em></p>
+  
+<div style="margin-left: 20px; margin-right: 20px; color: #002D72;">
   <p><em><b>Publications Update</b> (June 2025): Our paper on sequential decision-making was accepted for publication at <b>Management Science</b>. The pre-print can be found <a href="https://evgenykagan.github.io/files/sdm.pdf">here.</a></em></p>
  
   <p><em><b>Awards Update</b> (October 2024): Our Operations Research  <a href="https://pubsonline.informs.org/doi/abs/10.1287/opre.2021.2211">paper</a> just won the MSOM Service SIG best paper competition! </em></p>
