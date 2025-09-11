@@ -9,6 +9,6 @@ citation: 'Kagan Evgeny, Stephen Leider, Bill Lovejoy (2018). &quot;Paper Ideati
 seq: "4"
 permalink: /publication/ideation
 
----
 
+---
 Click this  <a href="/files/paper1.pdf" target="_blank"><u>LINK</u></a>  to be redirected to the pre-print version of this paper.  
