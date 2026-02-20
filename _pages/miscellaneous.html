@@ -32,34 +32,9 @@ date: 2026-02-20
 <div style="margin-top: 0;">
   <iframe
     id="rankings-embed"
-    src="/rankings/"
+    src="/rankings/?embed=1"
     title="Research Productivity Rankings"
     style="width: 100%; min-height: 2200px; border: 0;"
     loading="lazy">
   </iframe>
 </div>
-
-<script>
-(function() {
-  var frame = document.getElementById('rankings-embed');
-  if (!frame) return;
-  frame.addEventListener('load', function() {
-    try {
-      var doc = frame.contentDocument || frame.contentWindow.document;
-      if (!doc) return;
-      var css = doc.createElement('style');
-      css.textContent =
-        '.masthead,.sidebar,.page__meta,.page__share,.pagination{display:none !important;}' +
-        '.initial-content,.page,.page__inner-wrap,.page__content{max-width:100% !important;margin:0 !important;padding:0 !important;}' +
-        '.page__title,.page__content > p:first-of-type{display:none !important;}' +
-        '.methodology{display:none !important;}' +
-        '.page__content{padding-top:0 !important;}';
-      doc.head.appendChild(css);
-      var body = doc.body;
-      if (body) body.style.margin = '0';
-    } catch (e) {
-      // no-op
-    }
-  });
-})();
-</script>
