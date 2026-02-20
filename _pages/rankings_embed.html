@@ -1,0 +1,402 @@
+---
+layout: single
+title: "Rankings Embed"
+permalink: /rankings-embed/
+author_profile: false
+---
+
+<style>
+.masthead,
+.sidebar,
+.page__meta,
+.page__share,
+.pagination,
+.page__title,
+.page__footer,
+.author__avatar,
+.author__content,
+.author__urls-wrapper {
+  display: none !important;
+}
+#main,
+.initial-content,
+.page,
+.page__inner-wrap,
+.page__content {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.page {
+  float: none !important;
+  width: 100% !important;
+}
+.rankings-controls {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f2f6fc;
+  border: 1px solid #c7d6ee;
+  border-radius: 4px;
+}
+.rankings-controls label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.rankings-controls .control-group {
+  margin-bottom: 10px;
+}
+.rankings-controls .control-group:last-child {
+  margin-bottom: 0;
+}
+.rankings-controls select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.rankings-controls input[type="checkbox"] {
+  margin-right: 3px;
+}
+.rankings-controls .checkbox-group {
+  display: inline !important;
+}
+.rankings-controls .checkbox-group label {
+  font-weight: normal !important;
+  margin-right: 15px !important;
+  cursor: pointer;
+  display: inline !important;
+  white-space: nowrap;
+}
+.rankings-controls .checkbox-group label input[type="checkbox"] {
+  display: inline !important;
+  width: auto !important;
+  margin-right: 3px !important;
+}
+#rankings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8em;
+}
+#rankings-table th {
+  background: #002d72;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+#rankings-table thead tr.header-group th {
+  text-align: center;
+  font-size: 0.85em;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid #4a7abf;
+  cursor: default;
+}
+#rankings-table thead tr:nth-child(2) th {
+  font-size: 0.9em;
+}
+#rankings-table thead tr.header-group th.no-group {
+  background: transparent;
+  border-bottom: none;
+}
+#rankings-table th:hover {
+  background: #0047a0;
+}
+#rankings-table thead tr.header-group th:hover {
+  background: #002d72;
+}
+#rankings-table th .sort-arrow {
+  margin-left: 4px;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+#rankings-table th.sorted {
+  background: #0b3f8a;
+  box-shadow: inset 0 -3px 0 #8fb5ff;
+}
+#rankings-table th.sorted .sort-arrow {
+  opacity: 1;
+  font-size: 0.9em;
+}
+#rankings-table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+}
+#rankings-table td:nth-child(2) {
+  white-space: nowrap;
+}
+#rankings-table tr:nth-child(even) {
+  background: #f8fbff;
+}
+#rankings-table tr:hover {
+  background: #e8f1ff;
+}
+#rankings-table td.num {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+</style>
+
+<div class="rankings-controls">
+  <div class="control-group">
+    <label>Time Period:</label>
+    <select id="period-select">
+      <option value="3yr">Last 3 Years (2023&ndash;2025)</option>
+      <option value="5yr" selected>Last 5 Years (2021&ndash;2025)</option>
+      <option value="10yr">Last 10 Years (2016&ndash;2025)</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label>Journals:</label>
+    <span class="checkbox-group">
+      <label><input type="checkbox" class="journal-cb" value="mansci" checked> Management Science (OM/OR papers only)</label>
+      <label><input type="checkbox" class="journal-cb" value="or" checked> Operations Research</label>
+      <label><input type="checkbox" class="journal-cb" value="msom" checked> M&amp;SOM</label>
+    </span>
+  </div>
+</div>
+
+<table id="rankings-table">
+  <thead>
+    <tr class="header-group">
+      <th colspan="2" class="no-group"></th>
+      <th colspan="2">OM Faculty Count</th>
+      <th colspan="1">School-Level<br>Productivity</th>
+      <th colspan="3">Faculty-level<br>Productivity</th>
+    </tr>
+    <tr>
+      <th data-col="rank"># <span class="sort-arrow"></span></th>
+      <th data-col="name">School <span class="sort-arrow"></span></th>
+      <th data-col="faculty">Total <span class="sort-arrow"></span></th>
+      <th data-col="ranks">Asst/<br>Assoc/<br>Full <span class="sort-arrow"></span></th>
+      <th data-col="pubs">Papers<br>(School<br>/ Year) <span class="sort-arrow"></span></th>
+      <th data-col="papers_personal_productivity">Papers<br>/ Faculty<br>/ Year <span class="sort-arrow"></span></th>
+      <th data-col="avg_cites_per_paper">Cites<br>/ Paper<br>/ Year <span class="sort-arrow"></span></th>
+      <th data-col="citation_weighted_papers">Cites/Paper/Year<br>&times;<br>Papers/Faculty/Year <span class="sort-arrow"></span></th>
+    </tr>
+  </thead>
+  <tbody id="rankings-body"></tbody>
+</table>
+
+<script>
+(function() {
+  var data = {{ site.data.rankings_data | jsonify }};
+  var schools = data.schools;
+  var periods = data.time_periods;
+  var sortCol = 'papers_personal_productivity';
+  var sortAsc = false;
+  var schoolYearMetrics = {};
+
+  function getSelectedJournals() {
+    var cbs = document.querySelectorAll('.journal-cb:checked');
+    return Array.prototype.map.call(cbs, function(cb) { return cb.value; });
+  }
+
+  function getPeriod() {
+    return document.getElementById('period-select').value;
+  }
+
+  function parseCsv(text) {
+    var lines = text.trim().split(/\r?\n/);
+    if (lines.length < 2) return [];
+    var headers = lines[0].split(',');
+    var out = [];
+    for (var i = 1; i < lines.length; i++) {
+      if (!lines[i]) continue;
+      var cols = lines[i].split(',');
+      var row = {};
+      for (var j = 0; j < headers.length; j++) {
+        row[headers[j]] = cols[j] || '';
+      }
+      out.push(row);
+    }
+    return out;
+  }
+
+  function loadMetricData(callback) {
+    fetch('/data_work/school_year_metrics_combined.csv?ts=' + Date.now())
+      .then(function(resp) { return resp.text(); })
+      .then(function(text) {
+        var rows = parseCsv(text);
+        schoolYearMetrics = {};
+        rows.forEach(function(r) {
+          var school = r.rankings_school;
+          var year = r.year;
+          if (!schoolYearMetrics[school]) schoolYearMetrics[school] = {};
+          schoolYearMetrics[school][year] = {
+            ms_std_papers: parseFloat(r.ms_std_papers || '0') || 0,
+            ms_personal_papers: parseFloat(r.ms_personal_papers || '0') || 0,
+            ms_std_citations: parseFloat(r.ms_std_citations || '0') || 0,
+            ms_personal_citation_weighted: parseFloat(r.ms_personal_citation_weighted || '0') || 0,
+            or_std_papers: parseFloat(r.or_std_papers || '0') || 0,
+            or_personal_papers: parseFloat(r.or_personal_papers || '0') || 0,
+            or_std_citations: parseFloat(r.or_std_citations || '0') || 0,
+            or_personal_citation_weighted: parseFloat(r.or_personal_citation_weighted || '0') || 0,
+            msom_std_papers: parseFloat(r.msom_std_papers || '0') || 0,
+            msom_personal_papers: parseFloat(r.msom_personal_papers || '0') || 0,
+            msom_std_citations: parseFloat(r.msom_std_citations || '0') || 0,
+            msom_personal_citation_weighted: parseFloat(r.msom_personal_citation_weighted || '0') || 0
+          };
+        });
+      })
+      .catch(function() {
+        schoolYearMetrics = {};
+      })
+      .finally(function() {
+        callback();
+      });
+  }
+
+  function sumSchoolMetric(schoolName, fromYear, toYear, metricKey) {
+    if (!schoolYearMetrics[schoolName]) return 0;
+    var total = 0;
+    for (var y = fromYear; y <= toYear; y++) {
+      var rec = schoolYearMetrics[schoolName][String(y)];
+      if (rec) total += (rec[metricKey] || 0);
+    }
+    return total;
+  }
+
+  function computeMetrics(s, period, journals) {
+    var fromYear = periods[period].from;
+    var years = periods[period].years;
+    var toYear = fromYear + years - 1;
+    var stdCitations = 0;
+
+    if (journals.indexOf('mansci') >= 0) stdCitations += sumSchoolMetric(s.name, fromYear, toYear, 'ms_std_citations');
+    if (journals.indexOf('or') >= 0) stdCitations += sumSchoolMetric(s.name, fromYear, toYear, 'or_std_citations');
+    if (journals.indexOf('msom') >= 0) stdCitations += sumSchoolMetric(s.name, fromYear, toYear, 'msom_std_citations');
+
+    var papersSchoolLevel = 0;
+    var personalPaperCredits = 0;
+
+    if (journals.indexOf('mansci') >= 0) {
+      papersSchoolLevel += sumSchoolMetric(s.name, fromYear, toYear, 'ms_std_papers');
+      personalPaperCredits += sumSchoolMetric(s.name, fromYear, toYear, 'ms_personal_papers');
+    }
+    if (journals.indexOf('or') >= 0) {
+      papersSchoolLevel += sumSchoolMetric(s.name, fromYear, toYear, 'or_std_papers');
+      personalPaperCredits += sumSchoolMetric(s.name, fromYear, toYear, 'or_personal_papers');
+    }
+    if (journals.indexOf('msom') >= 0) {
+      papersSchoolLevel += sumSchoolMetric(s.name, fromYear, toYear, 'msom_std_papers');
+      personalPaperCredits += sumSchoolMetric(s.name, fromYear, toYear, 'msom_personal_papers');
+    }
+
+    return {
+      papersSchoolLevel: papersSchoolLevel,
+      personalPaperCredits: personalPaperCredits,
+      stdCitations: stdCitations
+    };
+  }
+
+  function computeRows() {
+    var period = getPeriod();
+    var journals = getSelectedJournals();
+    var years = periods[period].years;
+
+    if (journals.length === 0) return [];
+
+    return schools.map(function(s) {
+      var metricVals = computeMetrics(s, period, journals);
+      var assistant = s.faculty.assistant || 0;
+      var associate = s.faculty.associate || 0;
+      var full = s.faculty.full || 0;
+      var faculty = assistant + associate + full;
+      var papersSchoolPerYear = metricVals.papersSchoolLevel / years;
+      var papersPersonalProductivity = faculty > 0 ? metricVals.personalPaperCredits / faculty / years : 0;
+      var avgCitesPerPaper = metricVals.papersSchoolLevel > 0 ? metricVals.stdCitations / metricVals.papersSchoolLevel / years : 0;
+      var citesTimesPapers = avgCitesPerPaper * papersPersonalProductivity;
+      return {
+        name: s.name,
+        full_name: s.full_name,
+        pubs: papersSchoolPerYear,
+        assistant: assistant,
+        associate: associate,
+        full: full,
+        ranks: assistant + '/' + associate + '/' + full,
+        faculty: faculty,
+        papers_personal_productivity: papersPersonalProductivity,
+        avg_cites_per_paper: avgCitesPerPaper,
+        citation_weighted_papers: citesTimesPapers
+      };
+    }).filter(function(r) {
+      return r.faculty > 0 && r.pubs > 0;
+    });
+  }
+
+  function sortRows(rows) {
+    rows.sort(function(a, b) {
+      var va = a[sortCol];
+      var vb = b[sortCol];
+      if (typeof va === 'string') {
+        va = va.toLowerCase();
+        vb = vb.toLowerCase();
+      }
+      if (va < vb) return sortAsc ? -1 : 1;
+      if (va > vb) return sortAsc ? 1 : -1;
+      return 0;
+    });
+    return rows;
+  }
+
+  function render() {
+    var rows = sortRows(computeRows());
+    var tbody = document.getElementById('rankings-body');
+    var html = '';
+
+    function fmtNum(x) {
+      var r = Math.round(x * 100) / 100;
+      if (Math.abs(r - Math.round(r)) < 1e-9) return Math.round(r).toLocaleString();
+      return r.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    }
+
+    rows.forEach(function(r, i) {
+      html += '<tr>';
+      html += '<td class="num">' + fmtNum(i + 1) + '</td>';
+      html += '<td title="' + r.full_name + '">' + r.name + '</td>';
+      html += '<td class="num">' + fmtNum(r.faculty) + '</td>';
+      html += '<td class="num">' + r.ranks + '</td>';
+      html += '<td class="num">' + fmtNum(r.pubs) + '</td>';
+      html += '<td class="num">' + fmtNum(r.papers_personal_productivity) + '</td>';
+      html += '<td class="num">' + fmtNum(r.avg_cites_per_paper) + '</td>';
+      html += '<td class="num">' + fmtNum(r.citation_weighted_papers) + '</td>';
+      html += '</tr>';
+    });
+
+    tbody.innerHTML = html;
+
+    var ths = document.querySelectorAll('#rankings-table th[data-col]');
+    for (var i = 0; i < ths.length; i++) {
+      var arrow = ths[i].querySelector('.sort-arrow');
+      if (ths[i].getAttribute('data-col') === sortCol) {
+        ths[i].classList.add('sorted');
+        arrow.textContent = sortAsc ? '\u25B2' : '\u25BC';
+      } else {
+        ths[i].classList.remove('sorted');
+        arrow.textContent = '';
+      }
+    }
+  }
+
+  document.getElementById('period-select').addEventListener('change', render);
+  document.querySelectorAll('.journal-cb').forEach(function(cb) {
+    cb.addEventListener('change', render);
+  });
+
+  document.querySelectorAll('#rankings-table th[data-col]').forEach(function(th) {
+    th.addEventListener('click', function() {
+      var col = th.getAttribute('data-col');
+      if (col === sortCol) {
+        sortAsc = !sortAsc;
+      } else {
+        sortCol = col;
+        sortAsc = (col === 'name');
+      }
+      render();
+    });
+  });
+
+  loadMetricData(render);
+})();
+</script>
