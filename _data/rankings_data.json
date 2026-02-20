@@ -1,0 +1,1347 @@
+{
+  "last_updated": "2026-02-20",
+  "utd_source": "https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/",
+  "methodology_note": "Publication counts from UTD Top 100 Rankings (North American, journals: ManSci, OR, MSOM). Faculty counts are for Operations Management / Decision Sciences research-track faculty only (Assistant, Associate, Full Professors). Excludes clinical, teaching-track, emeritus, adjunct, visiting, practice-track faculty. Productivity = Total Pubs / Faculty Count / Years in Period.",
+  "time_periods": {
+    "3yr": {
+      "from": 2023,
+      "to": 2026,
+      "years": 3
+    },
+    "5yr": {
+      "from": 2021,
+      "to": 2026,
+      "years": 5
+    },
+    "10yr": {
+      "from": 2016,
+      "to": 2026,
+      "years": 10
+    }
+  },
+  "schools": [
+    {
+      "name": "MIT",
+      "full_name": "Massachusetts Institute of Technology (Sloan School of Management)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 5,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 42,
+          "or": 21,
+          "msom": 14
+        },
+        "5yr": {
+          "mansci": 71,
+          "or": 37,
+          "msom": 28
+        },
+        "10yr": {
+          "mansci": 126,
+          "or": 59,
+          "msom": 38
+        }
+      }
+    },
+    {
+      "name": "UT Dallas",
+      "full_name": "University of Texas at Dallas (Naveen Jindal School of Management)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 10,
+        "associate": 6,
+        "full": 8
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 49,
+          "or": 18,
+          "msom": 24
+        },
+        "5yr": {
+          "mansci": 72,
+          "or": 26,
+          "msom": 37
+        },
+        "10yr": {
+          "mansci": 120,
+          "or": 37,
+          "msom": 49
+        }
+      }
+    },
+    {
+      "name": "Columbia",
+      "full_name": "Columbia University (Columbia Business School)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 6,
+        "associate": 3,
+        "full": 9
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 52,
+          "or": 28,
+          "msom": 9
+        },
+        "5yr": {
+          "mansci": 76,
+          "or": 47,
+          "msom": 11
+        },
+        "10yr": {
+          "mansci": 110,
+          "or": 74,
+          "msom": 16
+        }
+      }
+    },
+    {
+      "name": "UPenn (Wharton)",
+      "full_name": "University of Pennsylvania (The Wharton School)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 3,
+        "full": 9
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 43,
+          "or": 7,
+          "msom": 13
+        },
+        "5yr": {
+          "mansci": 79,
+          "or": 11,
+          "msom": 23
+        },
+        "10yr": {
+          "mansci": 146,
+          "or": 17,
+          "msom": 40
+        }
+      }
+    },
+    {
+      "name": "Toronto (Rotman)",
+      "full_name": "University of Toronto (Rotman School of Management)",
+      "country": "Canada",
+      "faculty": {
+        "assistant": 5,
+        "associate": 3,
+        "full": 8
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 38,
+          "or": 14,
+          "msom": 14
+        },
+        "5yr": {
+          "mansci": 62,
+          "or": 21,
+          "msom": 24
+        },
+        "10yr": {
+          "mansci": 91,
+          "or": 28,
+          "msom": 32
+        }
+      }
+    },
+    {
+      "name": "NYU (Stern)",
+      "full_name": "New York University (Stern School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 4,
+        "associate": 2,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 38,
+          "or": 21,
+          "msom": 13
+        },
+        "5yr": {
+          "mansci": 52,
+          "or": 30,
+          "msom": 19
+        },
+        "10yr": {
+          "mansci": 102,
+          "or": 44,
+          "msom": 23
+        }
+      }
+    },
+    {
+      "name": "Harvard",
+      "full_name": "Harvard University (Harvard Business School)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 2,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 37,
+          "or": 5,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 79,
+          "or": 7,
+          "msom": 9
+        },
+        "10yr": {
+          "mansci": 129,
+          "or": 9,
+          "msom": 15
+        }
+      }
+    },
+    {
+      "name": "Duke (Fuqua)",
+      "full_name": "Duke University (Fuqua School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 6,
+        "full": 8
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 26,
+          "or": 20,
+          "msom": 8
+        },
+        "5yr": {
+          "mansci": 45,
+          "or": 33,
+          "msom": 17
+        },
+        "10yr": {
+          "mansci": 78,
+          "or": 57,
+          "msom": 26
+        }
+      }
+    },
+    {
+      "name": "Cornell",
+      "full_name": "Cornell University (SC Johnson College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 6,
+        "associate": 4,
+        "full": 3
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 42,
+          "or": 2,
+          "msom": 7
+        },
+        "5yr": {
+          "mansci": 66,
+          "or": 2,
+          "msom": 17
+        },
+        "10yr": {
+          "mansci": 97,
+          "or": 7,
+          "msom": 28
+        }
+      }
+    },
+    {
+      "name": "WashU (Olin)",
+      "full_name": "Washington University in St. Louis (Olin Business School)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 2,
+        "full": 3
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 35,
+          "or": 3,
+          "msom": 15
+        },
+        "5yr": {
+          "mansci": 50,
+          "or": 6,
+          "msom": 27
+        },
+        "10yr": {
+          "mansci": 81,
+          "or": 11,
+          "msom": 39
+        }
+      }
+    },
+    {
+      "name": "Chicago (Booth)",
+      "full_name": "University of Chicago (Booth School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 5,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 27,
+          "or": 20,
+          "msom": 2
+        },
+        "5yr": {
+          "mansci": 40,
+          "or": 31,
+          "msom": 2
+        },
+        "10yr": {
+          "mansci": 63,
+          "or": 54,
+          "msom": 5
+        }
+      }
+    },
+    {
+      "name": "USC (Marshall)",
+      "full_name": "University of Southern California (Marshall School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 2,
+        "full": 3
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 23,
+          "or": 9,
+          "msom": 12
+        },
+        "5yr": {
+          "mansci": 49,
+          "or": 13,
+          "msom": 16
+        },
+        "10yr": {
+          "mansci": 83,
+          "or": 20,
+          "msom": 25
+        }
+      }
+    },
+    {
+      "name": "Michigan (Ross)",
+      "full_name": "University of Michigan (Ross School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 8,
+        "associate": 4,
+        "full": 8
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 17,
+          "or": 5,
+          "msom": 10
+        },
+        "5yr": {
+          "mansci": 38,
+          "or": 8,
+          "msom": 18
+        },
+        "10yr": {
+          "mansci": 62,
+          "or": 15,
+          "msom": 32
+        }
+      }
+    },
+    {
+      "name": "UCLA (Anderson)",
+      "full_name": "University of California, Los Angeles (Anderson School of Management)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 3,
+        "full": 3
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 20,
+          "or": 6,
+          "msom": 4
+        },
+        "5yr": {
+          "mansci": 34,
+          "or": 13,
+          "msom": 10
+        },
+        "10yr": {
+          "mansci": 60,
+          "or": 27,
+          "msom": 20
+        }
+      }
+    },
+    {
+      "name": "Northwestern (Kellogg)",
+      "full_name": "Northwestern University (Kellogg School of Management)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 1,
+        "full": 6
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 17,
+          "or": 8,
+          "msom": 9
+        },
+        "5yr": {
+          "mansci": 38,
+          "or": 14,
+          "msom": 11
+        },
+        "10yr": {
+          "mansci": 72,
+          "or": 26,
+          "msom": 14
+        }
+      }
+    },
+    {
+      "name": "Stanford",
+      "full_name": "Stanford University (Graduate School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 3,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 22,
+          "or": 6,
+          "msom": 8
+        },
+        "5yr": {
+          "mansci": 50,
+          "or": 8,
+          "msom": 12
+        },
+        "10yr": {
+          "mansci": 80,
+          "or": 14,
+          "msom": 17
+        }
+      }
+    },
+    {
+      "name": "Minnesota (Carlson)",
+      "full_name": "University of Minnesota (Carlson School of Management)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 3,
+        "full": 2
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 18,
+          "or": 5,
+          "msom": 7
+        },
+        "5yr": {
+          "mansci": 37,
+          "or": 7,
+          "msom": 13
+        },
+        "10yr": {
+          "mansci": 62,
+          "or": 12,
+          "msom": 19
+        }
+      }
+    },
+    {
+      "name": "Purdue (Daniels)",
+      "full_name": "Purdue University (Mitch Daniels School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 1,
+        "associate": 4,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 23,
+          "or": 3,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 35,
+          "or": 6,
+          "msom": 10
+        },
+        "10yr": {
+          "mansci": 55,
+          "or": 10,
+          "msom": 15
+        }
+      }
+    },
+    {
+      "name": "Indiana (Kelley)",
+      "full_name": "Indiana University (Kelley School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 12,
+        "associate": 5,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 25,
+          "or": 2,
+          "msom": 7
+        },
+        "5yr": {
+          "mansci": 44,
+          "or": 4,
+          "msom": 14
+        },
+        "10yr": {
+          "mansci": 73,
+          "or": 6,
+          "msom": 23
+        }
+      }
+    },
+    {
+      "name": "Boston U (Questrom)",
+      "full_name": "Boston University (Questrom School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 3,
+        "full": 1
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 24,
+          "or": 3,
+          "msom": 3
+        },
+        "5yr": {
+          "mansci": 51,
+          "or": 4,
+          "msom": 8
+        },
+        "10yr": {
+          "mansci": 78,
+          "or": 5,
+          "msom": 12
+        }
+      }
+    },
+    {
+      "name": "UNC (Kenan-Flagler)",
+      "full_name": "University of North Carolina (Kenan-Flagler Business School)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 4,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 19,
+          "or": 6,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 30,
+          "or": 11,
+          "msom": 13
+        },
+        "10yr": {
+          "mansci": 45,
+          "or": 21,
+          "msom": 22
+        }
+      }
+    },
+    {
+      "name": "Georgia Tech (Scheller)",
+      "full_name": "Georgia Institute of Technology (Scheller College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 4,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 21,
+          "or": 1,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 33,
+          "or": 2,
+          "msom": 12
+        },
+        "10yr": {
+          "mansci": 49,
+          "or": 0,
+          "msom": 24
+        }
+      }
+    },
+    {
+      "name": "Yale",
+      "full_name": "Yale University (School of Management)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 4,
+        "associate": 1,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 17,
+          "or": 2,
+          "msom": 0
+        },
+        "5yr": {
+          "mansci": 33,
+          "or": 8,
+          "msom": 5
+        },
+        "10yr": {
+          "mansci": 48,
+          "or": 13,
+          "msom": 6
+        }
+      }
+    },
+    {
+      "name": "Carnegie Mellon (Tepper)",
+      "full_name": "Carnegie Mellon University (Tepper School of Business + Heinz College)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 1,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 12,
+          "or": 6,
+          "msom": 8
+        },
+        "5yr": {
+          "mansci": 26,
+          "or": 7,
+          "msom": 13
+        },
+        "10yr": {
+          "mansci": 44,
+          "or": 17,
+          "msom": 20
+        }
+      }
+    },
+    {
+      "name": "Arizona State (Carey)",
+      "full_name": "Arizona State University (W.P. Carey School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 4,
+        "associate": 5,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 23,
+          "or": 2,
+          "msom": 10
+        },
+        "5yr": {
+          "mansci": 27,
+          "or": 3,
+          "msom": 16
+        },
+        "10yr": {
+          "mansci": 39,
+          "or": 6,
+          "msom": 20
+        }
+      }
+    },
+    {
+      "name": "UC Berkeley (Haas)",
+      "full_name": "University of California, Berkeley (Haas School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 4,
+        "associate": 1,
+        "full": 2
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 18,
+          "or": 0,
+          "msom": 3
+        },
+        "5yr": {
+          "mansci": 36,
+          "or": 0,
+          "msom": 9
+        },
+        "10yr": {
+          "mansci": 68,
+          "or": 0,
+          "msom": 14
+        }
+      }
+    },
+    {
+      "name": "Maryland (Smith)",
+      "full_name": "University of Maryland (Robert H. Smith School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 1,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 18,
+          "or": 7,
+          "msom": 6
+        },
+        "5yr": {
+          "mansci": 28,
+          "or": 8,
+          "msom": 9
+        },
+        "10yr": {
+          "mansci": 50,
+          "or": 15,
+          "msom": 11
+        }
+      }
+    },
+    {
+      "name": "Wisconsin-Madison",
+      "full_name": "University of Wisconsin-Madison (Wisconsin School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 3,
+        "full": 4
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 19,
+          "or": 0,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 28,
+          "or": 2,
+          "msom": 12
+        },
+        "10yr": {
+          "mansci": 47,
+          "or": 4,
+          "msom": 16
+        }
+      }
+    },
+    {
+      "name": "Johns Hopkins (Carey)",
+      "full_name": "Johns Hopkins University (Carey Business School)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 1,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 13,
+          "or": 3,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 24,
+          "or": 4,
+          "msom": 13
+        },
+        "10yr": {
+          "mansci": 38,
+          "or": 5,
+          "msom": 19
+        }
+      }
+    },
+    {
+      "name": "UW (Foster)",
+      "full_name": "University of Washington (Foster School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 1,
+        "associate": 2,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 13,
+          "or": 3,
+          "msom": 4
+        },
+        "5yr": {
+          "mansci": 25,
+          "or": 3,
+          "msom": 11
+        },
+        "10yr": {
+          "mansci": 42,
+          "or": 6,
+          "msom": 12
+        }
+      }
+    },
+    {
+      "name": "Colorado (Leeds)",
+      "full_name": "University of Colorado (Leeds School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 6,
+        "associate": 3,
+        "full": 1
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 9,
+          "or": 6,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 22,
+          "or": 8,
+          "msom": 8
+        },
+        "10yr": {
+          "mansci": 36,
+          "or": 10,
+          "msom": 9
+        }
+      }
+    },
+    {
+      "name": "Emory (Goizueta)",
+      "full_name": "Emory University (Goizueta Business School)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 0,
+        "associate": 6,
+        "full": 2
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 10,
+          "or": 3,
+          "msom": 9
+        },
+        "5yr": {
+          "mansci": 21,
+          "or": 3,
+          "msom": 14
+        },
+        "10yr": {
+          "mansci": 37,
+          "or": 4,
+          "msom": 16
+        }
+      }
+    },
+    {
+      "name": "UIUC (Gies)",
+      "full_name": "University of Illinois at Urbana-Champaign (Gies College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 2,
+        "full": 2
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 17,
+          "or": 2,
+          "msom": 4
+        },
+        "5yr": {
+          "mansci": 26,
+          "or": 4,
+          "msom": 9
+        },
+        "10yr": {
+          "mansci": 44,
+          "or": 5,
+          "msom": 15
+        }
+      }
+    },
+    {
+      "name": "McGill (Desautels)",
+      "full_name": "McGill University (Desautels Faculty of Management)",
+      "country": "Canada",
+      "faculty": {
+        "assistant": 2,
+        "associate": 2,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 13,
+          "or": 5,
+          "msom": 2
+        },
+        "5yr": {
+          "mansci": 23,
+          "or": 6,
+          "msom": 4
+        },
+        "10yr": {
+          "mansci": 37,
+          "or": 11,
+          "msom": 7
+        }
+      }
+    },
+    {
+      "name": "Penn State (Smeal)",
+      "full_name": "Pennsylvania State University (Smeal College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 8,
+        "associate": 1,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 16,
+          "or": 2,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 34,
+          "or": 2,
+          "msom": 8
+        },
+        "10yr": {
+          "mansci": 52,
+          "or": 4,
+          "msom": 14
+        }
+      }
+    },
+    {
+      "name": "UC San Diego (Rady)",
+      "full_name": "University of California, San Diego (Rady School of Management)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 1,
+        "full": 4
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 12,
+          "or": 5,
+          "msom": 3
+        },
+        "5yr": {
+          "mansci": 22,
+          "or": 6,
+          "msom": 5
+        },
+        "10yr": {
+          "mansci": 32,
+          "or": 11,
+          "msom": 7
+        }
+      }
+    },
+    {
+      "name": "Florida (Warrington)",
+      "full_name": "University of Florida (Warrington College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 3,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 9,
+          "or": 3,
+          "msom": 7
+        },
+        "5yr": {
+          "mansci": 18,
+          "or": 3,
+          "msom": 13
+        },
+        "10yr": {
+          "mansci": 28,
+          "or": 6,
+          "msom": 19
+        }
+      }
+    },
+    {
+      "name": "Texas A&M (Mays)",
+      "full_name": "Texas A&M University (Mays Business School)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 3,
+        "full": 4
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 10,
+          "or": 3,
+          "msom": 7
+        },
+        "5yr": {
+          "mansci": 18,
+          "or": 4,
+          "msom": 10
+        },
+        "10yr": {
+          "mansci": 33,
+          "or": 6,
+          "msom": 16
+        }
+      }
+    },
+    {
+      "name": "Iowa (Tippie)",
+      "full_name": "University of Iowa (Tippie College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 6,
+        "associate": 3,
+        "full": 6
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 9,
+          "or": 3,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 18,
+          "or": 6,
+          "msom": 10
+        },
+        "10yr": {
+          "mansci": 30,
+          "or": 10,
+          "msom": 14
+        }
+      }
+    },
+    {
+      "name": "Ohio State (Fisher)",
+      "full_name": "Ohio State University (Fisher College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 7,
+        "associate": 1,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 12,
+          "or": 3,
+          "msom": 3
+        },
+        "5yr": {
+          "mansci": 16,
+          "or": 6,
+          "msom": 8
+        },
+        "10yr": {
+          "mansci": 31,
+          "or": 11,
+          "msom": 11
+        }
+      }
+    },
+    {
+      "name": "Notre Dame (Mendoza)",
+      "full_name": "University of Notre Dame (Mendoza College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 9,
+        "associate": 1,
+        "full": 4
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 8,
+          "or": 5,
+          "msom": 3
+        },
+        "5yr": {
+          "mansci": 20,
+          "or": 5,
+          "msom": 6
+        },
+        "10yr": {
+          "mansci": 33,
+          "or": 8,
+          "msom": 11
+        }
+      }
+    },
+    {
+      "name": "UBC (Sauder)",
+      "full_name": "University of British Columbia (Sauder School of Business)",
+      "country": "Canada",
+      "faculty": {
+        "assistant": 4,
+        "associate": 3,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 11,
+          "or": 3,
+          "msom": 3
+        },
+        "5yr": {
+          "mansci": 26,
+          "or": 4,
+          "msom": 6
+        },
+        "10yr": {
+          "mansci": 40,
+          "or": 8,
+          "msom": 11
+        }
+      }
+    },
+    {
+      "name": "Virginia (Darden)",
+      "full_name": "University of Virginia (Darden School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 8,
+        "associate": 7,
+        "full": 2
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 10,
+          "or": 2,
+          "msom": 3
+        },
+        "5yr": {
+          "mansci": 20,
+          "or": 2,
+          "msom": 5
+        },
+        "10yr": {
+          "mansci": 32,
+          "or": 4,
+          "msom": 9
+        }
+      }
+    },
+    {
+      "name": "Northeastern",
+      "full_name": "Northeastern University (D'Amore-McKim School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 4,
+        "associate": 3,
+        "full": 3
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 7,
+          "or": 4,
+          "msom": 2
+        },
+        "5yr": {
+          "mansci": 15,
+          "or": 6,
+          "msom": 5
+        },
+        "10yr": {
+          "mansci": 23,
+          "or": 9,
+          "msom": 8
+        }
+      }
+    },
+    {
+      "name": "Boston College (Carroll)",
+      "full_name": "Boston College (Carroll School of Management)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 5,
+        "associate": 0,
+        "full": 3
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 8,
+          "or": 4,
+          "msom": 4
+        },
+        "5yr": {
+          "mansci": 17,
+          "or": 5,
+          "msom": 6
+        },
+        "10yr": {
+          "mansci": 26,
+          "or": 8,
+          "msom": 10
+        }
+      }
+    },
+    {
+      "name": "Virginia Tech (Pamplin)",
+      "full_name": "Virginia Tech (Pamplin College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 2,
+        "full": 3
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 7,
+          "or": 3,
+          "msom": 5
+        },
+        "5yr": {
+          "mansci": 18,
+          "or": 3,
+          "msom": 7
+        },
+        "10yr": {
+          "mansci": 28,
+          "or": 5,
+          "msom": 13
+        }
+      }
+    },
+    {
+      "name": "SMU (Cox)",
+      "full_name": "Southern Methodist University (Cox School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 3,
+        "associate": 3,
+        "full": 2
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 8,
+          "or": 5,
+          "msom": 2
+        },
+        "5yr": {
+          "mansci": 18,
+          "or": 5,
+          "msom": 5
+        },
+        "10yr": {
+          "mansci": 29,
+          "or": 8,
+          "msom": 8
+        }
+      }
+    },
+    {
+      "name": "Dartmouth (Tuck)",
+      "full_name": "Dartmouth College (Tuck School of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 2,
+        "associate": 1,
+        "full": 5
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 7,
+          "or": 4,
+          "msom": 3
+        },
+        "5yr": {
+          "mansci": 16,
+          "or": 4,
+          "msom": 4
+        },
+        "10yr": {
+          "mansci": 26,
+          "or": 6,
+          "msom": 8
+        }
+      }
+    },
+    {
+      "name": "Michigan State (Broad)",
+      "full_name": "Michigan State University (Broad College of Business)",
+      "country": "USA",
+      "faculty": {
+        "assistant": 6,
+        "associate": 3,
+        "full": 7
+      },
+      "pubs": {
+        "3yr": {
+          "mansci": 5,
+          "or": 2,
+          "msom": 8
+        },
+        "5yr": {
+          "mansci": 17,
+          "or": 3,
+          "msom": 9
+        },
+        "10yr": {
+          "mansci": 26,
+          "or": 5,
+          "msom": 16
+        }
+      }
+    }
+  ]
+}

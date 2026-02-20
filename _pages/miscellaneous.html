@@ -1,0 +1,65 @@
+---
+layout: single
+title: "Miscellaneous"
+permalink: /misc/
+author_profile: true
+date: 2026-02-20
+---
+
+<article class="misc-entry" style="font-size: 0.95em;">
+  <h3>UTD Rankings and a Possible Extension</h3>
+
+  <p style="font-size: 0.95em;">
+    The <a href="https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/">UTD Top 100 Rankings</a> are a very useful public good. I started this side project as a respectful extension of the UTD framework, rather than an alternative to it (and also as a way to explore what can be done with the help of frontier agentic coding models 🤓 ). I made the following additions:
+  </p>
+
+  <ol>
+    <li><strong>OM Departments differ in size (and composition).</strong> Size adjustment can be difficult to do directly in the UTD interface. I added productivity adjustment based on OM faculty count.</li>
+    <li><strong>Counting.</strong> UTD counts each paper once for each school listed in the affiliations. I included an individual faculty-level view so that multiple same-school coauthors receive multiple credits.</li>
+    <li><strong>Citation adjustment.</strong> I also included a citation adjustment to add another view of impact.</li>
+    <li><strong>Multidisciplinary journals.</strong> Some journals are inherently multidisciplinary (looking at you, <em>Management Science</em>). Papers need to be classified as OM/OR vs. non-OM/OR. I use a combination of <em>Management Science</em> department labels and GenAI-based predictions for this.</li>
+  </ol>
+
+  <p>
+    This is only a first step: the current version covers 50 schools, U.S. only, and three operations journals (MS, OR and MSOM). Any comments are welcome!
+  </p>
+  <p style="font-size: 0.9em; font-style: italic; margin-bottom: 0.25rem;">
+    Build note: this was vibecoded with help from Claude Code (Opus 4.6) and OpenAI Codex (GPT-5.3-medium reasoning); see
+    <a href="/methodology/">methodology</a>.
+  </p>
+</article>
+
+<div style="margin-top: 0;">
+  <iframe
+    id="rankings-embed"
+    src="/rankings/"
+    title="Research Productivity Rankings"
+    style="width: 100%; min-height: 2200px; border: 0;"
+    loading="lazy">
+  </iframe>
+</div>
+
+<script>
+(function() {
+  var frame = document.getElementById('rankings-embed');
+  if (!frame) return;
+  frame.addEventListener('load', function() {
+    try {
+      var doc = frame.contentDocument || frame.contentWindow.document;
+      if (!doc) return;
+      var css = doc.createElement('style');
+      css.textContent =
+        '.masthead,.sidebar,.page__meta,.page__share,.pagination{display:none !important;}' +
+        '.initial-content,.page,.page__inner-wrap,.page__content{max-width:100% !important;margin:0 !important;padding:0 !important;}' +
+        '.page__title,.page__content > p:first-of-type{display:none !important;}' +
+        '.methodology{display:none !important;}' +
+        '.page__content{padding-top:0 !important;}';
+      doc.head.appendChild(css);
+      var body = doc.body;
+      if (body) body.style.margin = '0';
+    } catch (e) {
+      // no-op
+    }
+  });
+})();
+</script>
