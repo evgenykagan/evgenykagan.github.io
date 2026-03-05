@@ -144,13 +144,6 @@ author_profile: false
       <option value="3yr">Last 3 Years (2023&ndash;2025)</option>
       <option value="5yr" selected>Last 5 Years (2021&ndash;2025)</option>
       <option value="10yr">Last 10 Years (2016&ndash;2025)</option>
-      <option value="roll_2016_2020">Rolling 5 Years (2016&ndash;2020)</option>
-      <option value="roll_2017_2021">Rolling 5 Years (2017&ndash;2021)</option>
-      <option value="roll_2018_2022">Rolling 5 Years (2018&ndash;2022)</option>
-      <option value="roll_2019_2023">Rolling 5 Years (2019&ndash;2023)</option>
-      <option value="roll_2020_2024">Rolling 5 Years (2020&ndash;2024)</option>
-      <option value="roll_2021_2025">Rolling 5 Years (2021&ndash;2025)</option>
-      <option value="roll_2022_2026">Rolling 5 Years (2022&ndash;2026)</option>
     </select>
   </div>
   <div class="control-group">
@@ -201,31 +194,6 @@ author_profile: false
 
   function getPeriod() {
     return document.getElementById('period-select').value;
-  }
-
-  function getPeriodBounds(periodKey) {
-    if (periods[periodKey]) {
-      return {
-        fromYear: periods[periodKey].from,
-        years: periods[periodKey].years,
-        toYear: periods[periodKey].from + periods[periodKey].years - 1
-      };
-    }
-    var m = /^roll_(\d{4})_(\d{4})$/.exec(periodKey);
-    if (m) {
-      var fromYear = parseInt(m[1], 10);
-      var toYear = parseInt(m[2], 10);
-      return {
-        fromYear: fromYear,
-        years: toYear - fromYear + 1,
-        toYear: toYear
-      };
-    }
-    return {
-      fromYear: periods['5yr'].from,
-      years: periods['5yr'].years,
-      toYear: periods['5yr'].from + periods['5yr'].years - 1
-    };
   }
 
   function parseCsv(text) {
@@ -290,8 +258,8 @@ author_profile: false
   }
 
   function computeMetrics(s, period, journals) {
-    var fromYear = period.fromYear;
-    var years = period.years;
+    var fromYear = periods[period].from;
+    var years = periods[period].years;
     var toYear = fromYear + years - 1;
     var stdCitations = 0;
 
@@ -325,13 +293,12 @@ author_profile: false
   function computeRows() {
     var period = getPeriod();
     var journals = getSelectedJournals();
-    var bounds = getPeriodBounds(period);
-    var years = bounds.years;
+    var years = periods[period].years;
 
     if (journals.length === 0) return [];
 
     return schools.map(function(s) {
-      var metricVals = computeMetrics(s, bounds, journals);
+      var metricVals = computeMetrics(s, period, journals);
       var assistant = s.faculty.assistant || 0;
       var associate = s.faculty.associate || 0;
       var full = s.faculty.full || 0;
