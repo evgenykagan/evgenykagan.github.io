@@ -2,7 +2,7 @@
 layout: single
 title: "Research Productivity Rankings"
 permalink: /rankings/
-author_profile: true
+author_profile: false
 ---
 
 <style>
@@ -156,6 +156,9 @@ html.embed-mode body {
 </style>
 
 <p>The <a href="https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/">UTD Top 100 Business School Research Rankings</a> offer a clear and highly useful benchmark for research productivity. I started this (side) project as a respectful extension of the UTD framework.</p>
+<p style="margin: 6px 0 14px 0;">
+  <a href="/rolling-local/" style="display: inline-block; padding: 6px 10px; border: 1px solid #bfcde3; border-radius: 4px; background: #f2f6fc; color: #0a2f6b; text-decoration: none; font-weight: 600;">View Rankings-Over-Time Graph</a>
+</p>
 
 <div class="rankings-controls">
   <div class="control-group">
@@ -164,6 +167,13 @@ html.embed-mode body {
       <option value="3yr">Last 3 Years (2023&ndash;2025)</option>
       <option value="5yr" selected>Last 5 Years (2021&ndash;2025)</option>
       <option value="10yr">Last 10 Years (2016&ndash;2025)</option>
+      <option value="roll_2016_2020">Rolling 5 Years (2016&ndash;2020)</option>
+      <option value="roll_2017_2021">Rolling 5 Years (2017&ndash;2021)</option>
+      <option value="roll_2018_2022">Rolling 5 Years (2018&ndash;2022)</option>
+      <option value="roll_2019_2023">Rolling 5 Years (2019&ndash;2023)</option>
+      <option value="roll_2020_2024">Rolling 5 Years (2020&ndash;2024)</option>
+      <option value="roll_2021_2025">Rolling 5 Years (2021&ndash;2025)</option>
+      <option value="roll_2022_2026">Rolling 5 Years (2022&ndash;2026)</option>
     </select>
   </div>
   <div class="control-group">
@@ -182,7 +192,7 @@ html.embed-mode body {
       <th colspan="2" class="no-group"></th>
       <th colspan="2">OM Faculty Count</th>
       <th colspan="1">School-Level<br>Productivity</th>
-      <th colspan="3">Faculty-level<br>Productivity</th>
+      <th colspan="2">Faculty-level<br>Productivity</th>
     </tr>
     <tr>
       <th data-col="rank"># <span class="sort-arrow"></span></th>
@@ -191,8 +201,7 @@ html.embed-mode body {
       <th data-col="ranks">Asst/<br>Assoc/<br>Full <span class="sort-arrow"></span></th>
       <th data-col="pubs">Papers<br>(School<br>/ Year) <span class="sort-arrow"></span></th>
       <th data-col="papers_personal_productivity">Papers<br>/ Faculty<br>/ Year <span class="sort-arrow"></span></th>
-      <th data-col="avg_cites_per_paper">Cites<br>/ Paper<br>/ Year <span class="sort-arrow"></span></th>
-      <th data-col="citation_weighted_papers">Cites/Paper/Year<br>&times;<br>Papers/Faculty/Year <span class="sort-arrow"></span></th>
+      <th data-col="citations_per_faculty">Citations<br>/ Faculty <span class="sort-arrow"></span></th>
     </tr>
   </thead>
   <tbody id="rankings-body">
@@ -201,10 +210,10 @@ html.embed-mode body {
 
 <div id="methodology" class="methodology">
   <h4>Methodology</h4>
-  <p><strong>Publication data:</strong> From OM/OR-filtered paper-level datasets for <em>Management Science</em>, <em>Operations Research</em>, and <em>M&amp;SOM</em> (2016 onward). A paper is classified as OM/OR using <em>Management Science</em> departments where OM/OR is typically published (for example, Operations Management, Healthcare, and Optimization), augmented by GPT-5.3 inference for papers in other departments. This yields OM/OR shares of 26.8% for <em>Management Science</em>, 99.1% for <em>Operations Research</em>, and 100.0% for <em>M&amp;SOM</em>. For school mapping, author affiliations at publication are mapped to ranked schools only when a business-school unit is present in affiliation text; MIT Operations Research Center is included by exception.</p>
+  <p><strong>Publication data:</strong> From OM/OR-filtered paper-level datasets for <em>Management Science</em>, <em>Operations Research</em>, and <em>M&amp;SOM</em> (2016 onward). A paper is classified as OM/OR using <em>Management Science</em> departments where OM/OR is typically published (for example, Operations Management, Healthcare, and Optimization), augmented by GPT-5.3 inference for papers in other departments. This yields OM/OR shares of 26.8% for <em>Management Science</em>, 99.1% for <em>Operations Research</em>, and 100.0% for <em>M&amp;SOM</em>. For school mapping, author affiliations at publication are mapped to ranked schools only when a business-school unit is present in affiliation text; for MIT this is Sloan-only.</p>
   <p><strong>Faculty counts:</strong> Research-track Operations Management / Decision Sciences faculty only (Assistant, Associate, and Full Professors). Excludes clinical, teaching-track, emeritus, adjunct, visiting, and practice-track faculty.</p>
   <p><strong>Citation counts:</strong> Citation data are from <a href="https://openalex.org/">OpenAlex</a> only (no mixed sources). Papers are matched by DOI and citations use OpenAlex cited_by_count. Last citation refresh: February 19, 2026. Papers without a DOI match are left blank in the review files and treated as 0 in the table aggregates.</p>
-  <p><strong>Displayed metrics:</strong> Papers (School/Year) = school-level paper credits &divide; years in selected period (from the review CSV pipeline, not UTD table counts); Papers/Faculty/Year = author-level paper credits &divide; faculty count &divide; years (if two same-school coauthors are on one paper, that paper contributes 2); Cites/Paper/Year = total citations &divide; school papers &divide; years; Cites/Paper/Year &times; Papers/Faculty/Year = (total citations &divide; school papers &divide; years) &times; (author-level papers &divide; faculty &divide; years).</p>
+  <p><strong>Displayed metrics:</strong> Papers (School/Year) = school-level paper credits &divide; years in selected period (from the review CSV pipeline, not UTD table counts); Papers/Faculty/Year = author-level paper credits &divide; faculty count &divide; years (if two same-school coauthors are on one paper, that paper contributes 2); Citations/Faculty = total citations in the selected period &divide; faculty count.</p>
   <p><strong>Last updated:</strong> <span id="last-updated"></span></p>
 </div>
 
@@ -241,6 +250,31 @@ html.embed-mode body {
 
   function getPeriod() {
     return document.getElementById('period-select').value;
+  }
+
+  function getPeriodBounds(periodKey) {
+    if (periods[periodKey]) {
+      return {
+        fromYear: periods[periodKey].from,
+        years: periods[periodKey].years,
+        toYear: periods[periodKey].from + periods[periodKey].years - 1
+      };
+    }
+    var m = /^roll_(\d{4})_(\d{4})$/.exec(periodKey);
+    if (m) {
+      var fromYear = parseInt(m[1], 10);
+      var toYear = parseInt(m[2], 10);
+      return {
+        fromYear: fromYear,
+        years: toYear - fromYear + 1,
+        toYear: toYear
+      };
+    }
+    return {
+      fromYear: periods['5yr'].from,
+      years: periods['5yr'].years,
+      toYear: periods['5yr'].from + periods['5yr'].years - 1
+    };
   }
 
   function parseCsv(text) {
@@ -305,8 +339,8 @@ html.embed-mode body {
   }
 
   function computeMetrics(s, period, journals) {
-    var fromYear = periods[period].from;
-    var years = periods[period].years;
+    var fromYear = period.fromYear;
+    var years = period.years;
     var toYear = fromYear + years - 1;
     var stdCitations = 0;
 
@@ -322,28 +356,22 @@ html.embed-mode body {
 
     var papersSchoolLevel = 0;
     var personalPaperCredits = 0;
-    var citationWeightedPapers = 0;
-
     if (journals.indexOf('mansci') >= 0) {
       papersSchoolLevel += sumSchoolMetric(s.name, fromYear, toYear, 'ms_std_papers');
       personalPaperCredits += sumSchoolMetric(s.name, fromYear, toYear, 'ms_personal_papers');
-      citationWeightedPapers += sumSchoolMetric(s.name, fromYear, toYear, 'ms_personal_citation_weighted');
     }
     if (journals.indexOf('or') >= 0) {
       papersSchoolLevel += sumSchoolMetric(s.name, fromYear, toYear, 'or_std_papers');
       personalPaperCredits += sumSchoolMetric(s.name, fromYear, toYear, 'or_personal_papers');
-      citationWeightedPapers += sumSchoolMetric(s.name, fromYear, toYear, 'or_personal_citation_weighted');
     }
     if (journals.indexOf('msom') >= 0) {
       papersSchoolLevel += sumSchoolMetric(s.name, fromYear, toYear, 'msom_std_papers');
       personalPaperCredits += sumSchoolMetric(s.name, fromYear, toYear, 'msom_personal_papers');
-      citationWeightedPapers += sumSchoolMetric(s.name, fromYear, toYear, 'msom_personal_citation_weighted');
     }
 
     return {
       papersSchoolLevel: papersSchoolLevel,
       personalPaperCredits: personalPaperCredits,
-      citationWeightedPapers: citationWeightedPapers,
       stdCitations: stdCitations
     };
   }
@@ -351,21 +379,20 @@ html.embed-mode body {
   function computeRows() {
     var period = getPeriod();
     var journals = getSelectedJournals();
-    var years = periods[period].years;
+    var bounds = getPeriodBounds(period);
+    var years = bounds.years;
 
     if (journals.length === 0) return [];
 
     return schools.map(function(s) {
-      var metricVals = computeMetrics(s, period, journals);
+      var metricVals = computeMetrics(s, bounds, journals);
       var assistant = s.faculty.assistant || 0;
       var associate = s.faculty.associate || 0;
       var full = s.faculty.full || 0;
       var faculty = assistant + associate + full;
       var papersSchoolPerYear = metricVals.papersSchoolLevel / years;
-      var papersFacultyPerYear = faculty > 0 ? metricVals.papersSchoolLevel / faculty / years : 0;
       var papersPersonalProductivity = faculty > 0 ? metricVals.personalPaperCredits / faculty / years : 0;
-      var avgCitesPerPaper = metricVals.papersSchoolLevel > 0 ? metricVals.stdCitations / metricVals.papersSchoolLevel / years : 0;
-      var citesTimesPapers = avgCitesPerPaper * papersPersonalProductivity;
+      var citationsPerFaculty = faculty > 0 ? metricVals.stdCitations / faculty : 0;
       return {
         name: s.name,
         full_name: s.full_name,
@@ -377,8 +404,7 @@ html.embed-mode body {
         ranks: assistant + '/' + associate + '/' + full,
         faculty: faculty,
         papers_personal_productivity: papersPersonalProductivity,
-        avg_cites_per_paper: avgCitesPerPaper,
-        citation_weighted_papers: citesTimesPapers
+        citations_per_faculty: citationsPerFaculty
       };
     }).filter(function(r) {
       return r.faculty > 0 && r.pubs > 0;
@@ -419,8 +445,7 @@ html.embed-mode body {
       html += '<td class="num">' + r.ranks + '</td>';
       html += '<td class="num">' + fmtNum(r.pubs) + '</td>';
       html += '<td class="num">' + fmtNum(r.papers_personal_productivity) + '</td>';
-      html += '<td class="num">' + fmtNum(r.avg_cites_per_paper) + '</td>';
-      html += '<td class="num">' + fmtNum(r.citation_weighted_papers) + '</td>';
+      html += '<td class="num">' + fmtNum(r.citations_per_faculty) + '</td>';
       html += '</tr>';
     });
     tbody.innerHTML = html;
