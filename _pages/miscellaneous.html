@@ -2,7 +2,7 @@
 layout: single
 title: "Miscellaneous"
 permalink: /misc/
-author_profile: true
+author_profile: false
 date: 2026-02-20
 ---
 
@@ -16,23 +16,24 @@ date: 2026-02-20
   <ol>
     <li><strong>OM Departments differ in size (and composition).</strong> Size adjustment can be difficult to do directly in the UTD interface. I added productivity adjustment based on OM faculty count.</li>
     <li><strong>Counting.</strong> UTD counts each paper once for each school listed in the affiliations. I included an individual faculty-level view so that multiple same-school coauthors receive multiple credits.</li>
-    <li><strong>Citation adjustment.</strong> I also included a citation adjustment to add another view of impact.</li>
+    <li><strong>Impact.</strong> I also included citations to add another view of impact.</li>
     <li><strong>Multidisciplinary journals.</strong> Some journals are inherently multidisciplinary (looking at you, <em>Management Science</em>). Papers need to be classified as OM/OR vs. non-OM/OR. I use a combination of <em>Management Science</em> department labels and GenAI-based predictions for this.</li>
   </ol>
 
-  <p>
-    This is only a first step: the current version covers 50 schools, U.S. only, and three operations journals (MS, OR and MSOM). Any comments are welcome!
-  </p>
   <p style="font-size: 0.9em; font-style: italic; margin-bottom: 0.25rem;">
     Build note: this was vibecoded with help from Claude Code (Opus 4.6) and OpenAI Codex (GPT-5.3-medium reasoning); see
     <a href="/methodology/">methodology</a>.
   </p>
 </article>
 
-<div style="margin-top: 0;">
+<div style="margin-top: 1rem;">
+  <a href="/rolling-local/" class="btn btn--primary">View Rankings Over Time</a>
+</div>
+
+<div style="margin-top: 1rem;">
   <iframe
     id="rankings-embed"
-    src="/rankings-embed/"
+    src="/rankings-embed/?v=20260307d"
     title="Research Productivity Rankings"
     style="width: 100%; min-height: 2200px; border: 0;"
     loading="lazy">
