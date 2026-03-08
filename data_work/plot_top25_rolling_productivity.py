@@ -147,7 +147,7 @@ for school in all_schools:
 
 # ── Chart layout constants ──────────────────────────────────
 LABEL_H = 21
-MARGIN = {'l': 55, 'r': 80, 't': 90, 'b': 45}
+MARGIN = {'l': 55, 'r': 20, 't': 95, 'b': 45}
 # Stretch vertically as the school list grows so sidebar labels remain aligned
 # with the plotted rank positions instead of getting compressed.
 CHART_H = max(1200, MARGIN['t'] + MARGIN['b'] + len(all_schools) * (LABEL_H + 3) + 40)
@@ -159,13 +159,16 @@ layout = {
     'title': {
         'text': 'OM Research Output (OR/MS/MSOM papers) per research-track faculty',
         'font': {'size': 15, 'color': '#e8edf5', 'family': 'Georgia, serif'},
-        'x': 0.02, 'xanchor': 'left', 'y': 0.985, 'yanchor': 'top',
+        'x': 0.02, 'xanchor': 'left', 'y': 0.993, 'yanchor': 'top',
     },
     'xaxis': {
         'title': {'text': '', 'font': {'size': 1}},
         'fixedrange': True,
         'categoryorder': 'array',
         'categoryarray': window_order,
+        'tickmode': 'array',
+        'tickvals': window_order,
+        'ticktext': window_order,
         'range': [-0.2, len(window_order) - 1 + 0.22],
         'showgrid': True,
         'gridcolor': 'rgba(255,255,255,0.06)',
@@ -175,6 +178,7 @@ layout = {
         'linecolor': '#2d3654',
         'linewidth': 1,
         'tickfont': {'size': 11, 'color': '#7b8aaa'},
+        'side': 'bottom',
     },
     'yaxis': {
         'title': {'text': 'Rank', 'font': {'size': 12, 'color': '#7b8aaa'}},
@@ -242,6 +246,26 @@ for i, s in enumerate(sidebar_schools):
     s['y_pos'] = round(positions[i], 1)
 
 # ── HTML generation ─────────────────────────────────────────
+# Compute absolute left for each year label using calc() so positions
+# are correct at any viewport width (accounts for fixed px margins).
+_xrange_lo, _xrange_hi = -0.2, len(window_order) - 1 + 0.22
+_xrange_span = _xrange_hi - _xrange_lo
+_ml, _mr = MARGIN['l'], MARGIN['r']
+top_axis_html = ''
+for i, w in enumerate(window_order):
+    frac = (i - _xrange_lo) / _xrange_span
+    # tick_x = _ml + frac * (W - _ml - _mr)  →  calc(frac*100% + (_ml - frac*(_ml+_mr))px)
+    px_offset = _ml - frac * (_ml + _mr)
+    top_axis_html += (
+        f'<div style="position:absolute; left:calc({frac * 100:.2f}% + {px_offset:.1f}px); '
+        f'transform: rotate(-28deg); transform-origin:left bottom; '
+        f'color:#7b8aaa; font-size:9px; line-height:1; white-space:nowrap;">{w}</div>'
+    )
+top_axis_container_style = (
+    f"position:absolute; left:0; right:0; top:70px; "
+    f"height:30px; pointer-events:none; overflow:visible;"
+)
+
 html = f"""<!doctype html>
 <html>
 <head>
@@ -251,8 +275,11 @@ html = f"""<!doctype html>
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body style="margin:0; font-family: 'DM Sans', -apple-system, sans-serif; background:#1a1f2e;">
-  <div style="display:flex; width:100%; height:{CHART_H}px;">
-    <div id="chart" style="flex:1 1 auto; min-width:0; height:{CHART_H}px;"></div>
+  <div style="display:flex; width:100%; align-items:stretch;">
+    <div style="flex:1 1 auto; min-width:0; position:relative; height:{CHART_H}px; overflow:visible; z-index:1;">
+      <div id="chart" style="height:{CHART_H}px;"></div>
+      <div style="{top_axis_container_style}">{top_axis_html}</div>
+    </div>
     <div id="school-list" style="position:relative; width:240px; height:{CHART_H}px; overflow:hidden; border-left:1px solid #2a3350; background:#161b28; box-sizing:border-box;"></div>
   </div>
   <script>
