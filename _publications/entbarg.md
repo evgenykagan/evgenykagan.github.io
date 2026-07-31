@@ -7,6 +7,7 @@ excerpt: "In this research we study how entrepreneurs and investors divide equit
 seq: "2"
 date: "2026-01-01"
 venue: "Manufacturing and Service Operations Management (MSOM)"
+status: Forthcoming
 paperurl: "https://pubsonline.informs.org/doi/10.1287/msom.2024.1228"
 preprint: "/files/entbarg.pdf"
 citation: 'Kagan Evgeny, Kyle Hyndman, Anyan Qi (2026). &quot;Startup Contracting and Entrepreneur-Investor Bargaining.&quot; <i>Manufacturing and Service Operations Management</i>, Forthcoming.'
