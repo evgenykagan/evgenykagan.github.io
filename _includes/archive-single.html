@@ -33,6 +33,10 @@
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
+
+    {% if post.coauthors %}
+      <p><b>Co-authored with {{ post.coauthors }}.</b></p>
+    {% endif %}
     
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
@@ -52,8 +56,8 @@
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
     
-    {% if post.paperurl %}
-      <p>Download <a href=" {{ post.paperurl }} "><u>here</u></a></p>
+    {% if post.paperurl or post.preprint %}
+      <p>{% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank"><u>Link to publication</u></a>{% endif %}{% if post.paperurl and post.preprint %} &nbsp;|&nbsp; {% endif %}{% if post.preprint %}<a href="{{ post.preprint }}" target="_blank"><u>Pre-print</u></a>{% endif %}</p>
     {% endif %}
 
   </article>

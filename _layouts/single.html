@@ -43,8 +43,8 @@ layout: default
         {% endif %}
         
              
-        {% if page.paperurl %}
-          <p>Download <a href=" {{ page.paperurl }} "><u>here</u></a></p>
+        {% if page.paperurl or page.preprint %}
+          <p>{% if page.paperurl %}<a href="{{ page.paperurl }}" target="_blank"><u>Link to publication</u></a>{% endif %}{% if page.paperurl and page.preprint %} &nbsp;|&nbsp; {% endif %}{% if page.preprint %}<a href="{{ page.preprint }}" target="_blank"><u>Pre-print</u></a>{% endif %}</p>
         {% endif %}
     
         </header>
