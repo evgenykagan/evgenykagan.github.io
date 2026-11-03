@@ -7,9 +7,10 @@ excerpt: "In this paper we look at how people make dynamic (sequential) decision
 seq: "5"
 date: "2025-06-20"
 venue: "Management Science"
+year: 2026
 paperurl: "https://pubsonline.informs.org/doi/10.1287/mnsc.2023.02381"
 preprint: "/files/sdm.pdf"
-citation: 'Kagan Evgeny, Stephen Leider, Ozge Sahin (2025). &quot;Sequential Decision Making: From Decision Elicitation to Strategy Identification.&quot; <i>Management Science</i>, Forthcoming.'
+citation: 'Kagan Evgeny, Stephen Leider, Ozge Sahin (2026). &quot;Sequential Decision Making: From Decision Elicitation to Strategy Identification.&quot; <i>Management Science</i>. 72(6).'
 ---
 
 <b>Co-authored with Stephen Leider and Ozge Sahin.</b>
