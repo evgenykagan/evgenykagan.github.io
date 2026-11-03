@@ -16,6 +16,8 @@ I am an Associate Professor of Operations Management and Business Analytics at J
 My research lies at the intersection of operations management and behavioral science.  My areas of expertise are experiment design, behavioral economics/operations, service operations and innovation/entrepreneurship. 
 
 <div style="margin-left: 20px; margin-right: 20px; color: #002D72;">
+  <p><em><b>Awards Update</b> (November 2026): Our <a href="https://arxiv.org/abs/2605.24208">paper</a> on physician self-assignment in emergency departments just won the INFORMS Behavioral Operations Working Paper competition!</em></p>
+
   <p><em><b>Publications Update</b> (July 2026): Our paper on customer preferences for waiting time distributions has been accepted for publication at <b>Management Science</b>. The pre-print can be found <a href="https://evgenykagan.github.io/files/Waiting.pdf">here.</a></em></p>
 
   <p><em><b>Publications Update</b> (March 2026): Our paper on the adoption of AI chatbots in customer service has been accepted for publication at <b>Manufacturing and Service Operations Management</b>. The pre-print can be found <a href="https://arxiv.org/abs/2504.06145">here.</a></em></p>
